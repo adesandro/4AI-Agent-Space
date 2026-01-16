@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agent Registration",
+  "type": "object",
+  "properties": {
+    "url": { "type": "string", "format": "uri" },
+    "name": { "type": "string" },
+    "tag": { 
+      "type": "array", 
+      "items": { "type": "integer" },
+      "minItems": 1 
+    },
+    "rating": { 
+      "type": "number", 
+      "minimum": 1.0, 
+      "maximum": 5.0,
+      "default": 3.0
+    }
+  },
+  "required": ["url", "name", "tag"]
+}
